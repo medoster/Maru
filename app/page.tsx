@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { ExternalLink, BookOpen, Twitter, Calendar } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card"
@@ -101,6 +102,13 @@ export default function Home() {
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
+              <Image
+                src="/maru-icon.svg"
+                alt="MARU Logo"
+                width={32}
+                height={32}
+                className="rounded-lg"
+              />
               <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-500">
                 MARU
               </span>
