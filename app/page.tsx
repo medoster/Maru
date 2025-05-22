@@ -13,6 +13,7 @@ export default function Home() {
       id: "6036",
       title: "SHADOW CODE",
       url: "https://mdms.jp/scenarios/6036",
+      thumbnail: "/shadow-code-thumb.jpg",
       description: "西暦2324年、未来都市エクリプスシティを舞台にしたSF系マーダーミステリー",
       date: "2024/08/17",
       genre: "マーダーミステリー",
@@ -53,6 +54,7 @@ export default function Home() {
       id: "8056",
       title: "JILVAIN-ジルヴェイン-",
       url: "https://mdms.jp/scenarios/8056",
+      thumbnail: "/jilvain-thumb.jpg",
       description: "嵐に包まれた禁断の島「オニロ島」を舞台にしたファンタジー系マーダーミステリー",
       date: "2025/02/18",
       genre: "マーダーミステリー",
@@ -175,6 +177,15 @@ export default function Home() {
             <div className="mt-12 space-y-12">
               {works.map((work) => (
                 <Card key={work.id} className="overflow-hidden bg-gray-800/50 border-gray-700 text-white">
+                  <div className="relative w-full h-[200px] md:h-[300px]">
+                    <Image
+                      src={work.thumbnail}
+                      alt={work.title}
+                      fill
+                      className="object-cover"
+                      priority
+                    />
+                  </div>
                   <CardHeader className="pb-4">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                       <div>
